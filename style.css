@@ -1,0 +1,982 @@
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+#sonyLogo {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 0;
+  /* border: 2px solid; */
+  background-color: black;
+  padding: 0.5rem ;
+}
+
+#sonyLogo img {
+  height: 1rem;
+  filter: invert(100%);
+}
+
+nav {
+  /* border: 2px solid; */
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 0.15rem solid #0070CC;
+}
+.upper-nav {
+  /* border: 2px solid; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+
+.nav-options {
+  /* border: 2px solid; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+}
+.upper-nav .nav-options img {
+  height: 3.5rem;
+}
+
+.nav-options a {
+  text-decoration: none;
+  margin-right: 0.7rem;
+  color: black;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.nav-options a i {
+  color: grey;
+}
+
+.nav-options a:hover{
+  color: #4b4bc9;
+}
+.nav-options a:hover > i{
+  color: #4b4bc9;
+}
+
+
+.nav-signin i , .signin-btn {
+  margin-right: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.nav-signin i:hover {
+  cursor: pointer;
+}
+
+.signin-btn {
+  background-color: #6c6cee;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 1rem;
+  padding: 0.2rem 1rem;
+
+}
+
+.signin-btn:hover {
+  background-color: #4b4bc9;
+  cursor: pointer;
+}
+
+.lower-nav {
+  /* position: relative; */
+  display: flex;
+  /* border: 2px solid; */
+  justify-content: center;
+  align-items: center;
+  background-image: url(./Assets/night-sky-copy.jpg);
+  background-size: cover;
+  height: 3rem;
+}
+
+.lower-nav p {
+  color: white;
+  margin-right: 1.7rem;
+  font-size: 1.2rem;
+  text-shadow: 0 0 1rem black;
+  font-weight: 1000;
+}
+
+.lower-nav i {
+  font-size: 1.3rem;
+  margin-right: 0.3rem;
+}
+
+.lower-nav button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 65%;
+  border: 1px solid black;
+  background-color: white;
+  /* color: transparent; */
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.lower-nav img {
+  height: 6.2rem;
+  align-self: baseline;
+  margin-left: 1.5rem;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  /* height: 100vh; */
+}
+
+.banners {
+  display: flex;
+  flex-direction: column;
+}
+
+.big-banner {
+  background-image: url(./Assets/valorant-hero.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  width: 100%;
+  height: 80vh;
+  color: white;
+  /* box-shadow: inset 20rem -0rem 10rem 10rem black; */
+  /* background: linear-gradient(90deg, #000000, white), url(./Assets/valorant-hero.jpg); */
+  /* opacity: 50%; */
+  position: relative;
+}
+
+.big-banner::after {
+  position: absolute;
+  content: ' ';
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right, black 35%, transparent);
+  z-index: 1;
+}
+.big-banner img {
+  height: 3.5rem;
+  filter: invert(100%);
+  margin-bottom: 2.5rem;
+  align-self: center;
+}
+
+.big-banner-content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  margin-left: 7rem;
+  /* border: 2px solid; */
+  z-index: 2;
+}
+
+.big-banner-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0;
+  font-weight: 300;
+}
+
+.big-banner-content p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  font-size: 1rem;
+  padding: 0.7rem 1.2rem;
+  border-radius: 4rem;
+  border: none;
+  font-weight: bold;
+  /* position: relative; */
+
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+/* .btn::after {
+  content: ' ';
+  position: absolute;
+  height: 109%;
+  width: 104%;
+  border-radius: inherit;
+  background-color: transparent;
+  border: 0.2rem solid ;
+} */
+
+
+.banner-container {
+  display: flex;
+  justify-content: center;
+  /* width: 100%; */
+  align-items: center;
+  /* border: 2px solid; */
+  height: 12rem;
+
+}
+
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 6.5rem;
+  /* border: 2px solid; */
+  padding: 0 0.2rem;
+  margin-right: 0.5rem;
+  border-radius: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.banner:nth-of-type(1) {
+  border: 2px solid blue;
+}
+
+.banner img {
+  height: 92%;
+  border-radius: inherit;
+  opacity: 0.8;
+}
+
+.banner:hover > img {
+  opacity: 1;
+  box-shadow: 0 0.5rem 1rem 0.2rem gray;
+}
+.banner:hover {
+  transform: translateY(-0.5rem);
+}
+
+.banner:hover ~ .banner {
+  opacity: 0.5;
+}
+
+.accessories {
+  display: flex;
+  flex-direction: column;
+  padding: 0 5rem;
+  margin-top: 3rem;
+  /* border: 2px solid; */
+
+}
+
+.current-item {
+  display: flex;
+  /* border: 2px solid; */
+  justify-content: space-between;
+}
+
+.current-item img {
+  height: 29rem;
+}
+
+.current-item-info {
+  display: flex;
+  flex-direction: column;
+  width: 32%;
+}
+
+.current-item-info h1 {
+  font-size: 3.4rem;
+  font-weight: 300;
+  margin-top: 1.5rem;
+}
+
+.current-item-info h2 {
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-bottom: 0;
+  color: #6c6cee;
+}
+.current-item-info p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin-bottom: 1.5rem;
+}
+
+.current-item-info p:nth-of-type(2) {
+  font-size: 1.1rem;
+}
+
+.red-btn {
+  background-color: #D53B00;
+  color: white;
+}
+
+.blue-btn {
+  background-color: #0070CC;
+  color: white;
+}
+
+.accessories-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  /* border: 2px solid; */
+  margin-top: 2.5rem;
+}
+
+.accessories-container:hover {
+  cursor: grab;
+}
+
+.accessory-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: 2px solid; */
+  flex-wrap: wrap;
+  opacity: 0.7;
+}
+
+.accessory-info:hover {
+  cursor: pointer;
+}
+
+.accessory-info p {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.accessory {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 7.7rem;
+  /* border: 2px solid; */
+  /* padding: 0.1rem 0.2rem; */
+  border-radius: 1rem;
+}
+
+.accessory-info:nth-of-type(1) > .accessory{
+  border: 0.15rem solid #0064b7;
+  
+}
+
+.accessory-info:nth-of-type(1) {
+  opacity: 1;
+  color: #0064b7;
+}
+
+.accessory img {
+  height: 95%;
+  border-radius: inherit;
+  box-shadow: 0rem 0.2rem 0.3rem 0.3rem #8080802e;
+  transition: transform 0.3s ease;
+}
+
+.accessory img:hover{
+  height: 96%;
+  transform: scale(1.05);
+}
+
+.games {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #121314;
+  margin-top: 12rem;
+  padding-top: 6rem;
+  padding: 6rem 12rem 0rem;
+}
+
+.games h1 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+
+.game-switch {
+  margin: 3rem 0;
+  /* border: 1px solid white; */
+  border-radius: 2rem;
+  background-color: #242628;
+}
+
+.game-switch:hover {
+  box-shadow: 0rem 0.2rem 0.7rem 0.1rem black;
+}
+
+.game-switch .btn {
+  padding: 0.9rem 0.8rem;
+  border-radius: 2rem;
+}
+
+.game-switch .btn:nth-of-type(2) {
+  background-color: transparent;
+  color: white;
+}
+
+.game-switch .btn:nth-of-type(2):hover {
+  color: #0070CC;
+}
+
+.games-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.game {
+  margin-right: 1rem;
+  cursor: pointer;
+  margin-bottom: 1.2rem;
+}
+
+.game img{
+  height: 13rem;
+  width: 13rem;
+  border-radius: 0.5rem;
+  box-shadow: 0rem 0.2rem 0.7rem 0.1rem black;
+  transition: transform 0.3s ease;
+}
+
+.game p {
+  margin-top: 0.5rem;
+}
+
+.banner:hover > img {
+  opacity: 1;
+  box-shadow: 0 0.5rem 1rem 0.2rem gray;
+}
+.game img:hover {
+  transform: scale(1.05);
+}
+
+.game:hover ~ .game{
+  opacity: 0.5;
+}
+
+.playstation-plus {
+  background-image: url(https://gmedia.playstation.com/is/image/SIEPDC/play-play-play-ps-plus-background-desktop-01-ja-jp-03jul23?$2400px$);
+
+  background-size: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 0 3rem;
+}
+
+.playstation-plus > img{
+  height: 4.4rem;
+  margin-bottom: 0;
+}
+
+.playstation-plus h1 {
+  font-size: 2.5rem;
+  font-weight: 350;
+  margin: 0;
+}
+
+.playstation-plus > p {
+  margin: 2rem 0;
+  opacity: 0.5;
+}
+
+.play-plus-card-container {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  position: relative;
+  /* border: 2px solid; */
+  height:20rem;
+}
+
+@keyframes scrollLeft {
+
+  to {
+    left: -140%;
+  }
+}
+
+.play-plus-card {
+  background-image: url(./Assets/spiderman.jpg);
+  cursor: pointer;
+  background-size: cover;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 2rem;
+  align-items: start;
+  box-sizing: border-box;
+  left: 100%;
+  border-radius: 1rem;
+  position: absolute;
+  height: 20rem;
+  /* width: 50vw; */
+  overflow-y: hidden;
+
+  animation-name: scrollLeft;
+  animation-duration: 15s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.card1 {
+  animation-delay: calc(15s / 3 *(3 - 1) * -1);
+}
+
+.card2 {
+  animation-delay: calc(15s / 3 *(3 - 2) * -1);
+}
+
+.card3 {
+  animation-delay: calc(15s / 3 *(3 - 3) * -1);
+}
+
+
+.plus-card-options {
+  /* border: 2px solid white; */
+  width: 50%;
+  padding: 0;
+}
+
+.plus-card-options p {
+  margin: 0;
+  opacity: 0.8;
+}
+
+.plus-card-options h2 {
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+.plus-card-options button {
+  background-color: #242628;
+  border: 0.09rem solid #65d1ff;
+  font-size: 1rem;
+  padding: 0.2rem 5rem;
+  color: gold;
+  font-weight: 600;
+  font-family:'Lucida Sans', 'Lucida Sans Regular';
+  letter-spacing: 0.3rem;
+}
+
+.playstation-plus > button {
+  margin: 5rem 0 2rem;
+  font-size: 1rem;
+}
+
+.vr-poster {
+  background-image: url(https://gmedia.playstation.com/is/image/SIEPDC/psvr2-register-homepage-hero-desktop-01-en-14nov22?$4000px$);
+  background-size: cover;
+  padding: 7rem 7rem;
+  color: white;
+}
+
+.vr-poster .current-item-info {
+  width: 40%;
+}
+
+.vr-poster h1 {
+  font-size: 2.7rem;
+  margin-bottom: 1rem;
+}
+
+.vr-poster p:nth-of-type(1) {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.next-poster {
+  background-image: url(https://gmedia.playstation.com/is/image/SIEPDC/this-month-on-playstation-sep-homepage-background-desktop-02-en-23aug24?$4000px$);
+}
+
+.more-releases {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #26264F;
+  flex-wrap: wrap;
+  padding: 2rem 15rem;
+}
+
+.block-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.block {
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+  border-radius: 1rem;
+  padding: 0.3rem;
+  width: 40%;
+  margin-right: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.block:hover {
+  border: 0.15rem solid #fefafa97;
+  transform: translateY(-0.5rem);
+}
+
+.block:hover > .block-info {
+  background-color: #282727c7;
+  box-shadow: 0rem 0.1rem 0.2rem 0.1rem #000000b9;
+}
+
+.block-info {
+  /* border: 2px solid black; */
+  display: flex;
+  flex-direction: column;
+  border-radius: inherit;
+  padding: 0.8rem;
+  /* flex-wrap: wrap; */
+}
+
+.block-info img {
+  height: 13rem;
+  border-radius: inherit;
+}
+
+.block-info h3 {
+  font-size: 1.3rem;
+  font-weight: 350;
+  margin-bottom: 0;
+  margin-left: 1rem;
+}
+
+.block-info p {
+  font-size: 0.9rem;
+  font-weight: 350;
+  margin: 1rem;
+}
+
+.more-releases .btn {
+  margin: 3.5rem 0 2rem;
+}
+
+.psStore {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 7rem;
+}
+
+.psStore > img{
+  height: 30rem;
+  border-radius: 1rem;
+  
+}
+
+.psStore-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  /* border: 2px solid; */
+  width: 30%;
+}
+
+.psStore-details img {
+  height: 4rem;
+}
+
+.psStore-details h1, .headline {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin: 0.7rem 0 0;
+}
+
+.psStore-details p {
+  opacity: 0.65;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.latest-news {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.latest-news-cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  margin: 5rem 0;
+}
+
+.news-card {
+  display: flex;
+  flex: 1;
+  height: 35rem;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  /* border: 2px solid; */
+  border-radius: 1rem;
+  width: 25%;
+  margin-left: 1rem;
+  padding: 0.5rem 0;
+  box-shadow: 0 0.1rem 0.5rem 0.1rem #00000019;
+  transition: 1s;
+}
+
+.news-card:hover {
+  box-shadow: 0 0.2rem 0.5rem 0.2rem #0000003e;
+}
+
+.news-card:hover > .card-top > img{
+  box-shadow: 0rem 0.3rem 0.5rem 0.2rem #000000d2;
+}
+
+.news-card .card-top > img {
+  height: 15rem;
+  border-radius: 1rem;
+  width: 97%;
+  align-self: center;
+  justify-self: flex-start;
+ box-shadow: 0rem 0.2rem 0.5rem 0.1rem #000000b8;
+ transition: 0.2s;
+}
+
+.card-top {
+  display: flex;
+  flex-direction: column;
+}
+
+.news-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0 1.5rem;
+}
+
+.news-details h2 {
+  font-weight: 300;
+  font-size: 1.5rem;
+  opacity: 1;
+}
+
+.news-details p {
+  margin: 0;
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+
+.news-source {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+  margin: 1rem 1.5rem 1rem;
+}
+
+.news-source img {
+  height: 3rem;
+  width: 3rem;
+  align-self: flex-start;
+  margin-right: 1rem;
+}
+
+.news-source-info > p, h4 {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.news-source-info >:nth-child(3) {
+  opacity: 0.8;
+}
+
+.social-media {
+  background-color: #F5F7FA;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.social-media >p  {
+  opacity: 0.8;
+
+}
+
+.social-media-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 45%;
+  margin: 5rem 0;
+}
+.social-media-icons i {
+  font-size: 6rem;
+  transition-duration: 0.5s;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.social-media-icons i:hover {
+  transform: scale(1.05);
+}
+
+#copyright {
+  font-size: 0.5rem;
+  line-height: 7rem;
+  padding-left: 5rem;
+
+}
+
+footer {
+  background-color: #00439C;
+  padding: 2rem 5rem;
+  color: white;
+}
+
+footer >img {
+  height: 3.2rem;
+}
+
+.footer-column {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-top: 0.05rem solid #ffffff71;
+  border-bottom: 0.05rem solid #ffffff71;
+  margin: 1rem 0;
+}
+
+.column ul{
+  list-style-type: none;
+  padding: 0;
+  line-height: 2;
+  font-size: 0.9rem;
+}
+
+.column ul li:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.column ul span i{
+  font-size: 1.5rem;
+  margin-right: 1rem;
+
+  &:hover {
+    opacity: 0.7;
+    cursor: pointer;
+  }
+}
+
+
+.license {
+  /* border: 2px solid; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.license p {
+  font-size: 0.95rem;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.license p u:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.license .logos {
+  display: flex;
+  justify-content: space-between;
+}
+
+.license .logos img {
+  height: 5rem;
+}
+
+.license .logos img:nth-of-type(2) {
+  height: 4rem;
+  border: 0.05rem solid white;
+}
+
+.policy {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95rem;
+  border-top: 0.05rem solid #ffffff71;
+  margin-top: 1rem;
+  padding-top: 0.5rem;
+}
+
+#select-country {
+  display: flex;
+  align-items: center;
+  &:hover {cursor: pointer;}
+}
+
+#select-country > * {
+  margin-right: 1rem;
+
+}
+
+#select-country i {
+  font-size: 1.2rem;
+}
+
+#terms-link {
+  display: flex;
+  align-items: center;
+}
+
+#terms-link p {
+  padding: 0 0.5rem;
+  border-right: 0.05rem solid #ffffff71;
+
+  &:hover {
+    opacity: 0.7;
+    cursor: pointer;
+  }
+}
